@@ -1,94 +1,34 @@
-/* =============================================
-   PetCare Plus – script.js
-   ============================================= */
-
-// ---------- Header: scroll shadow + hamburger ----------
-const header = document.getElementById('header');
-const hamburger = document.getElementById('hamburger');
-const headerNav = document.getElementById('headerNav');
-
+/* NAV scroll */
+const nav = document.getElementById('main-nav');
 window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 10);
-}, { passive: true });
-
-hamburger.addEventListener('click', () => {
-  const isOpen = headerNav.classList.toggle('open');
-  hamburger.classList.toggle('active', isOpen);
-  hamburger.setAttribute('aria-expanded', isOpen);
+  nav.classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// Close mobile nav when a link is clicked
-headerNav.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    headerNav.classList.remove('open');
-    hamburger.classList.remove('active');
-    hamburger.setAttribute('aria-expanded', 'false');
+/* Hamburger */
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobile-nav');
+const mobileNavClose = document.getElementById('mobile-nav-close');
+hamburger.addEventListener('click', () => mobileNav.classList.add('active'));
+mobileNavClose.addEventListener('click', closeMobileNav);
+function closeMobileNav() { mobileNav.classList.remove('active'); }
+
+/* FAQ accordion */
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
   });
 });
 
-// ---------- Scroll Reveal ----------
-const revealTargets = [
-  '.section-header',
-  '.problem-card',
-  '.service-card',
-  '.feature-item',
-  '.flow-step',
-  '.voice-card',
-  '.faq-item',
-  '.trust-bar__item',
-  '.problems__solution',
-];
-
-function addRevealClass() {
-  revealTargets.forEach(selector => {
-    document.querySelectorAll(selector).forEach((el, i) => {
-      el.classList.add('reveal');
-      const delay = Math.min(i, 5);
-      if (delay > 0) el.classList.add(`reveal--delay-${delay}`);
-    });
-  });
-}
-
-function onReveal(entries, observer) {
-  entries.forEach(entry => {
+/* Scroll reveal */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
       observer.unobserve(entry.target);
     }
   });
-}
-
-function initReveal() {
-  addRevealClass();
-  const observer = new IntersectionObserver(onReveal, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px',
-  });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-}
-
-// Run after DOM ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initReveal);
-} else {
-  initReveal();
-}
-
-// ---------- Smooth active nav link highlighting ----------
-const sections = document.querySelectorAll('section[id], div[id]');
-const navLinks = document.querySelectorAll('.header__nav-list a[href^="#"]');
-
-const navObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const id = entry.target.getAttribute('id');
-      navLinks.forEach(link => {
-        link.style.color = link.getAttribute('href') === `#${id}`
-          ? 'var(--color-primary)'
-          : '';
-      });
-    }
-  });
-}, { threshold: 0.4 });
-
-sections.forEach(sec => navObserver.observe(sec));
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));

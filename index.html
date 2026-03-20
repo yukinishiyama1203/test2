@@ -1,468 +1,405 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PetCare Plus | 大切なペットのために</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PawCare｜あなたとペットの笑顔のために</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ========== HEADER ========== -->
-  <header class="header" id="header">
-    <div class="header__inner container">
-      <a href="#" class="header__logo">
-        <span class="header__logo-icon">🐾</span>
-        <span class="header__logo-text">PetCare Plus</span>
-      </a>
-      <nav class="header__nav" id="headerNav">
-        <ul class="header__nav-list">
-          <li><a href="#problems">お悩み</a></li>
-          <li><a href="#service">サービス</a></li>
-          <li><a href="#features">特徴</a></li>
-          <li><a href="#flow">ご利用の流れ</a></li>
-          <li><a href="#voice">お客様の声</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
-      </nav>
-      <a href="#cta" class="btn btn--primary header__cta">無料相談する</a>
-      <button class="header__hamburger" id="hamburger" aria-label="メニュー">
-        <span></span><span></span><span></span>
-      </button>
+<!-- ─── NAV ─── -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Paw<span>Care</span></a>
+    <ul class="nav-links">
+      <li><a href="#service">サービス</a></li>
+      <li><a href="#features">特徴</a></li>
+      <li><a href="#flow">ご利用の流れ</a></li>
+      <li><a href="#voice">お客様の声</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="#cta" class="nav-cta">無料で相談する</a>
+    <div class="nav-hamburger" id="hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
     </div>
-  </header>
+  </div>
+</nav>
 
-  <!-- ========== 1. HERO / FIRST VIEW ========== -->
-  <section class="hero">
-    <div class="hero__bg-shapes" aria-hidden="true">
-      <div class="hero__shape hero__shape--1"></div>
-      <div class="hero__shape hero__shape--2"></div>
-      <div class="hero__shape hero__shape--3"></div>
-    </div>
-    <div class="container hero__inner">
-      <div class="hero__content">
-        <p class="hero__eyebrow">犬・猫の飼い主さまへ</p>
-        <h1 class="hero__title">
-          大切な家族のために<br />
-          <span class="hero__title-accent">最善のケア</span>を。
-        </h1>
-        <p class="hero__desc">
-          PetCare Plus は、愛犬・愛猫の健康と幸せを全力でサポートする<br class="pc-only" />
-          ペット専門の総合ケアサービスです。
-        </p>
-        <div class="hero__actions">
-          <a href="#cta" class="btn btn--primary btn--lg">今すぐ無料相談する</a>
-          <a href="#service" class="btn btn--outline btn--lg">サービスを見る</a>
-        </div>
-        <ul class="hero__badges">
-          <li><span class="badge">🏆 累計5,000頭以上</span></li>
-          <li><span class="badge">⭐ 満足度98%</span></li>
-          <li><span class="badge">🔒 安心の実績10年</span></li>
-        </ul>
-      </div>
-      <div class="hero__visual">
-        <div class="hero__illust">
-          <div class="hero__circle hero__circle--1"></div>
-          <img
-            class="hero__pet hero__pet--dog"
-            src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=480&q=80"
-            alt="笑顔のゴールデンレトリバー"
-          />
-          <img
-            class="hero__pet hero__pet--cat"
-            src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=360&q=80"
-            alt="かわいいオレンジ猫"
-          />
-        </div>
-      </div>
-    </div>
-    <div class="hero__wave" aria-hidden="true">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
-      </svg>
-    </div>
-  </section>
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobile-nav">
+  <button class="mobile-nav-close" id="mobile-nav-close">✕</button>
+  <a href="#service" onclick="closeMobileNav()">サービス</a>
+  <a href="#features" onclick="closeMobileNav()">特徴</a>
+  <a href="#flow" onclick="closeMobileNav()">ご利用の流れ</a>
+  <a href="#voice" onclick="closeMobileNav()">お客様の声</a>
+  <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+  <a href="#cta" class="btn-primary" onclick="closeMobileNav()">無料で相談する</a>
+</div>
 
-  <!-- ========== TRUST BAR ========== -->
-  <div class="trust-bar">
-    <div class="container trust-bar__inner">
-      <div class="trust-bar__item">
-        <strong class="trust-bar__num">5,000<span>頭+</span></strong>
-        <span class="trust-bar__label">累計サポート実績</span>
+<!-- ─── HERO ─── -->
+<section class="hero" id="top">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        犬・猫のオーナー専門サービス
       </div>
-      <div class="trust-bar__divider" aria-hidden="true"></div>
-      <div class="trust-bar__item">
-        <strong class="trust-bar__num">98<span>%</span></strong>
-        <span class="trust-bar__label">オーナー満足度</span>
+      <h1 class="hero-title">
+        大切な家族に、<br>
+        <em>最高のケア</em>を。
+      </h1>
+      <p class="hero-desc">
+        ペットのことが心配で仕事や外出も不安…<br>
+        そんな悩みを、PawCareが丸ごとサポートします。<br>
+        プロのスタッフがあなたの大切な子を安心してお預かりします。
+      </p>
+      <div class="hero-actions">
+        <a href="#cta" class="btn-primary">
+          🐾 無料相談を予約する
+        </a>
+        <a href="#service" class="btn-ghost">
+          サービスを見る →
+        </a>
       </div>
-      <div class="trust-bar__divider" aria-hidden="true"></div>
-      <div class="trust-bar__item">
-        <strong class="trust-bar__num">10<span>年</span></strong>
-        <span class="trust-bar__label">サービス運営実績</span>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">2,500<span>+</span></div>
+          <div class="stat-label">累計ご利用件数</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">98<span>%</span></div>
+          <div class="stat-label">オーナー満足度</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">5<span>年</span></div>
+          <div class="stat-label">のサービス実績</div>
+        </div>
       </div>
-      <div class="trust-bar__divider" aria-hidden="true"></div>
-      <div class="trust-bar__item">
-        <strong class="trust-bar__num">24<span>h</span></strong>
-        <span class="trust-bar__label">365日サポート対応</span>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-wrap">
+        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80&auto=format&fit=crop" alt="犬と飼い主">
+      </div>
+      <div class="float-card float-card-1">
+        <span class="float-icon">🐶</span>
+        <div>
+          <div style="font-size:12px;color:#7A4A2A;font-weight:600;">今日のわんちゃん</div>
+          <div style="font-size:13px">元気いっぱいです🎉</div>
+        </div>
+      </div>
+      <div class="float-card float-card-2">
+        <span class="float-icon">⭐</span>
+        <div>
+          <div style="font-size:12px;color:#7A4A2A;font-weight:600;">評価</div>
+          <div style="font-size:13px">★★★★★ 5.0</div>
+        </div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ========== 2. PROBLEMS ========== -->
-  <section class="problems section" id="problems">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">こんなお悩みはありませんか？</p>
-        <h2 class="section-title">ペットオーナーの<br /><span class="accent">よくあるお悩み</span></h2>
-      </div>
-      <div class="problems__grid">
-        <div class="problem-card">
-          <div class="problem-card__emoji">😰</div>
-          <p class="problem-card__text">ペットの健康状態が心配で<br />夜も眠れないことがある</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-card__emoji">🏥</div>
-          <p class="problem-card__text">急な体調不良の時に<br />どこに相談すべきかわからない</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-card__emoji">💸</div>
-          <p class="problem-card__text">医療費が高くて<br />経済的な負担が大きい</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-card__emoji">✈️</div>
-          <p class="problem-card__text">旅行や出張の時に<br />預け先が見つからない</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-card__emoji">🍽️</div>
-          <p class="problem-card__text">食事・栄養管理について<br />正しい知識がわからない</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-card__emoji">🐾</div>
-          <p class="problem-card__text">しつけに困っていて<br />専門家に相談したい</p>
+<!-- ─── PAIN POINTS ─── -->
+<section class="section pain" id="pain">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="badge">こんなお悩みありませんか？</span>
+      <h2 class="section-title">ペットオーナーが<br>抱えるよくある悩み</h2>
+      <p class="section-sub">多くの飼い主さんが感じている不安や困りごと、私たちが一緒に解決します。</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal">
+        <img class="pain-thumb" src="https://images.unsplash.com/photo-1544568100-847a948585b9?w=200&q=80&auto=format&fit=crop" alt="外出中の不安">
+        <div>
+          <h3>外出中が不安</h3>
+          <p>長時間の外出や旅行中、ペットを一人にしてしまうことへの罪悪感や不安が拭えない。</p>
         </div>
       </div>
-      <div class="problems__solution">
-        <div class="problems__solution-inner">
-          <p class="problems__solution-label">そのお悩み、</p>
-          <p class="problems__solution-title">PetCare Plus が<span>まるごと解決します！</span></p>
+      <div class="pain-card reveal">
+        <img class="pain-thumb" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200&q=80&auto=format&fit=crop" alt="体調変化が心配">
+        <div>
+          <h3>急な体調変化が心配</h3>
+          <p>仕事中に体調が悪くなったら…という不安。すぐに気づいてあげられない状況が辛い。</p>
+        </div>
+      </div>
+      <div class="pain-card reveal">
+        <img class="pain-thumb" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=200&q=80&auto=format&fit=crop" alt="預け先が見つからない">
+        <div>
+          <h3>預け先が見つからない</h3>
+          <p>信頼できるペットシッターや預け先がなく、旅行や帰省を諦めたことがある。</p>
+        </div>
+      </div>
+      <div class="pain-card reveal">
+        <img class="pain-thumb" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=200&q=80&auto=format&fit=crop" alt="費用が高すぎる">
+        <div>
+          <h3>費用が高すぎる</h3>
+          <p>ペットホテルやトリミングなど、費用が思った以上にかかってしまい継続が難しい。</p>
+        </div>
+      </div>
+      <div class="pain-card reveal">
+        <img class="pain-thumb" src="https://images.unsplash.com/photo-1601758174114-e711c0cbaa69?w=200&q=80&auto=format&fit=crop" alt="運動・散歩が足りない">
+        <div>
+          <h3>運動・散歩が足りない</h3>
+          <p>忙しくて十分に散歩や運動をさせてあげられていないことへの罪悪感がある。</p>
+        </div>
+      </div>
+      <div class="pain-card reveal">
+        <img class="pain-thumb" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&q=80&auto=format&fit=crop" alt="専門的なアドバイスが欲しい">
+        <div>
+          <h3>専門的なアドバイスが欲しい</h3>
+          <p>食事・しつけ・健康管理など、何が正解か分からず毎日手探りの状態が続いている。</p>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- ========== 3. SERVICE INTRO ========== -->
-  <section class="service section section--tint" id="service">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">サービス紹介</p>
-        <h2 class="section-title">PetCare Plus の<br /><span class="accent">3つのサービス</span></h2>
-        <p class="section-desc">愛犬・愛猫の健康と生活を、専門家チームがトータルサポートします。</p>
-      </div>
-      <div class="service__grid">
-        <div class="service-card">
-          <div class="service-card__icon-wrap service-card__icon-wrap--green">
-            <span class="service-card__icon">🩺</span>
-          </div>
-          <h3 class="service-card__title">健康管理サポート</h3>
-          <p class="service-card__desc">
-            獣医師・ペット看護師が24時間体制でオンライン相談に対応。日々の健康管理から緊急時の対処法まで丁寧にサポートします。
-          </p>
-          <ul class="service-card__list">
-            <li>獣医師によるオンライン相談</li>
-            <li>定期健康チェックリスト</li>
-            <li>ワクチン・健康診断スケジュール管理</li>
-          </ul>
-        </div>
-        <div class="service-card service-card--featured">
-          <div class="service-card__badge">人気No.1</div>
-          <div class="service-card__icon-wrap service-card__icon-wrap--orange">
-            <span class="service-card__icon">🏠</span>
-          </div>
-          <h3 class="service-card__title">ペットホテル&シッター</h3>
-          <p class="service-card__desc">
-            全国300か所以上の提携施設・シッターネットワーク。旅行・出張中も愛するペットを安心して預けられます。
-          </p>
-          <ul class="service-card__list">
-            <li>全国300施設以上から選択可能</li>
-            <li>認定ペットシッター派遣</li>
-            <li>滞在中の写真・動画レポート</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <div class="service-card__icon-wrap service-card__icon-wrap--blue">
-            <span class="service-card__icon">📚</span>
-          </div>
-          <h3 class="service-card__title">トレーニング&食育</h3>
-          <p class="service-card__desc">
-            プロのトレーナーによるしつけ指導と、栄養士監修のパーソナル食事プランで、ペットの生涯を健やかに。
-          </p>
-          <ul class="service-card__list">
-            <li>プロトレーナーによるオンライン指導</li>
-            <li>栄養士監修の食事プラン作成</li>
-            <li>月次レポートと改善提案</li>
-          </ul>
-        </div>
-      </div>
+    <div class="pain-resolve reveal">
+      <p>そのすべてのお悩み、<em>PawCare</em>がまとめて解決します。<br>大切な家族を、安心して任せてください。</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ========== 4. FEATURES ========== -->
-  <section class="features section" id="features">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">サービスの特徴</p>
-        <h2 class="section-title">選ばれる<span class="accent"> 4つの理由</span></h2>
-      </div>
-      <div class="features__list">
-        <div class="feature-item">
-          <div class="feature-item__num">01</div>
-          <div class="feature-item__icon">👨‍⚕️</div>
-          <div class="feature-item__body">
-            <h3 class="feature-item__title">専門家チームによるサポート</h3>
-            <p class="feature-item__desc">獣医師・ペット看護師・認定トレーナー・栄養士が連携して、あなたとペットを多角的にサポートします。資格保有者のみで構成されたチームが担当。</p>
-          </div>
-        </div>
-        <div class="feature-item feature-item--reverse">
-          <div class="feature-item__num">02</div>
-          <div class="feature-item__icon">📱</div>
-          <div class="feature-item__body">
-            <h3 class="feature-item__title">スマホひとつで完結する利便性</h3>
-            <p class="feature-item__desc">専用アプリから相談・予約・記録管理がすべてできます。チャット・ビデオ通話に対応し、いつでもどこでも専門家に相談可能。</p>
-          </div>
-        </div>
-        <div class="feature-item">
-          <div class="feature-item__num">03</div>
-          <div class="feature-item__icon">💰</div>
-          <div class="feature-item__body">
-            <h3 class="feature-item__title">透明でわかりやすい料金体系</h3>
-            <p class="feature-item__desc">月額定額制でオプション追加も明朗会計。隠れた費用は一切なく、予算に合わせたプランを選べます。初月は全額返金保証付き。</p>
-          </div>
-        </div>
-        <div class="feature-item feature-item--reverse">
-          <div class="feature-item__num">04</div>
-          <div class="feature-item__icon">🔒</div>
-          <div class="feature-item__body">
-            <h3 class="feature-item__title">10年以上の実績と安心感</h3>
-            <p class="feature-item__desc">2014年のサービス開始から累計5,000頭以上のサポート実績。厳格な認定制度と定期研修で、常に最高品質のサービスを維持しています。</p>
-          </div>
-        </div>
-      </div>
+<!-- ─── SERVICE ─── -->
+<section class="section service" id="service">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="badge">Service</span>
+      <h2 class="section-title">PawCareのサービス紹介</h2>
+      <p class="section-sub">犬・猫の飼い主さんに特化した、充実のサポートをご用意しています。</p>
     </div>
-  </section>
-
-  <!-- ========== 5. FLOW ========== -->
-  <section class="flow section section--tint" id="flow">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">ご利用の流れ</p>
-        <h2 class="section-title">たった<span class="accent">3ステップ</span>で<br />すぐに始められます</h2>
+    <div class="service-grid">
+      <div class="service-img-wrap reveal">
+        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=80&auto=format&fit=crop" alt="ペットケアのイメージ">
+        <div class="service-tag">🐾 プロのケア</div>
       </div>
-      <div class="flow__steps">
-        <div class="flow-step">
-          <div class="flow-step__num">STEP <span>1</span></div>
-          <div class="flow-step__icon">📋</div>
-          <h3 class="flow-step__title">無料相談・ヒアリング</h3>
-          <p class="flow-step__desc">フォームまたはお電話にてご連絡ください。ペットの種類・年齢・お悩みをお聞きし、最適なプランをご提案します。</p>
-        </div>
-        <div class="flow__arrow" aria-hidden="true">▶</div>
-        <div class="flow-step">
-          <div class="flow-step__num">STEP <span>2</span></div>
-          <div class="flow-step__icon">✅</div>
-          <h3 class="flow-step__title">プラン選択・お申し込み</h3>
-          <p class="flow-step__desc">ご提案内容にご納得いただけたら、プランを選択してお申し込みください。最短翌日からサービス開始が可能です。</p>
-        </div>
-        <div class="flow__arrow" aria-hidden="true">▶</div>
-        <div class="flow-step">
-          <div class="flow-step__num">STEP <span>3</span></div>
-          <div class="flow-step__icon">🐾</div>
-          <h3 class="flow-step__title">サービス開始</h3>
-          <p class="flow-step__desc">専任の担当者が決まり、サポートがスタートします。アプリをダウンロードして、いつでも気軽に相談できる環境が整います。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== 6. VOICE ========== -->
-  <section class="voice section" id="voice">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">お客様の声</p>
-        <h2 class="section-title">利用されたオーナーさまの<span class="accent">リアルな声</span></h2>
-      </div>
-      <div class="voice__grid">
-        <div class="voice-card">
-          <div class="voice-card__header">
-            <img class="voice-card__avatar" src="https://i.pravatar.cc/100?img=47" alt="田中 美咲さん" />
-            <div class="voice-card__info">
-              <p class="voice-card__name">田中 美咲さん（32歳）</p>
-              <p class="voice-card__pet">トイプードル・ラテ（3歳）</p>
-            </div>
-          </div>
-          <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
-          <p class="voice-card__text">
-            「深夜にラテが急に嘔吐して、パニックになりましたが、すぐに獣医師に相談できて本当に助かりました。的確なアドバイスで落ち着いて対処できました。加入して良かったです！」
-          </p>
-        </div>
-        <div class="voice-card">
-          <div class="voice-card__header">
-            <img class="voice-card__avatar" src="https://i.pravatar.cc/100?img=52" alt="鈴木 健太さん" />
-            <div class="voice-card__info">
-              <p class="voice-card__name">鈴木 健太さん（45歳）</p>
-              <p class="voice-card__pet">柴犬・むぎ（5歳）</p>
-            </div>
-          </div>
-          <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
-          <p class="voice-card__text">
-            「出張が多い仕事なので、信頼できるシッターが見つかるか心配でしたが、PetCare Plusのシッターさんはとても丁寧で、滞在中の写真も毎日送ってくれて安心でした。」
-          </p>
-        </div>
-        <div class="voice-card">
-          <div class="voice-card__header">
-            <img class="voice-card__avatar" src="https://i.pravatar.cc/100?img=32" alt="山本 さゆりさん" />
-            <div class="voice-card__info">
-              <p class="voice-card__name">山本 さゆりさん（28歳）</p>
-              <p class="voice-card__pet">スコティッシュフォールド・ソラ（2歳）</p>
-            </div>
-          </div>
-          <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
-          <p class="voice-card__text">
-            「初めて猫を飼ったので食事について全く分からなかったのですが、栄養士さんが月齢に合わせた食事プランを作ってくれました。ソラもとても元気になりました！」
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== 7. FAQ ========== -->
-  <section class="faq section section--tint" id="faq">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">よくある質問</p>
-        <h2 class="section-title"><span class="accent">FAQ</span></h2>
-      </div>
-      <div class="faq__list">
-        <details class="faq-item">
-          <summary class="faq-item__q">
-            <span class="faq-item__icon">Q</span>
-            対応しているペットの種類を教えてください。
-          </summary>
-          <div class="faq-item__a">
-            <span class="faq-item__a-icon">A</span>
-            <p>犬・猫を主なサービス対象としていますが、小動物（うさぎ・ハムスターなど）についてもご相談ください。一部サービスは対応可能です。</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-item__q">
-            <span class="faq-item__icon">Q</span>
-            料金はどのくらいかかりますか？
-          </summary>
-          <div class="faq-item__a">
-            <span class="faq-item__a-icon">A</span>
-            <p>月額3,980円〜のプランをご用意しています。ペットの頭数やご希望のサービス内容によって最適なプランをご提案します。初月は全額返金保証付きですので、まずは気軽にお試しください。</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-item__q">
-            <span class="faq-item__icon">Q</span>
-            相談はいつでもできますか？
-          </summary>
-          <div class="faq-item__a">
-            <span class="faq-item__a-icon">A</span>
-            <p>はい、24時間365日対応しています。夜間・休日の緊急相談にも獣医師がチャットまたはビデオ通話で対応します。</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-item__q">
-            <span class="faq-item__icon">Q</span>
-            解約はいつでもできますか？
-          </summary>
-          <div class="faq-item__a">
-            <span class="faq-item__a-icon">A</span>
-            <p>はい、いつでも解約可能です。解約手数料も一切かかりません。アプリまたはメールにてお手続きください。</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-item__q">
-            <span class="faq-item__icon">Q</span>
-            ペットシッターの安全性は確認されていますか？
-          </summary>
-          <div class="faq-item__a">
-            <span class="faq-item__a-icon">A</span>
-            <p>すべてのシッター・施設は当社独自の厳格な審査を通過した認定パートナーです。身元確認・資格確認・定期研修を義務付けており、安心してお任せいただけます。</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-item__q">
-            <span class="faq-item__icon">Q</span>
-            高齢ペットや持病があるペットでも利用できますか？
-          </summary>
-          <div class="faq-item__a">
-            <span class="faq-item__a-icon">A</span>
-            <p>はい、むしろ高齢ペットや持病をお持ちのペットに特に役立つサービスです。専門の獣医師が継続的に健康管理をサポートします。お申し込み時にご状況をお聞かせください。</p>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== 8. CTA ========== -->
-  <section class="cta-section" id="cta">
-    <div class="cta-section__bg-shapes" aria-hidden="true">
-      <div class="cta-section__shape cta-section__shape--1"></div>
-      <div class="cta-section__shape cta-section__shape--2"></div>
-    </div>
-    <div class="container cta-section__inner">
-      <div class="cta-section__pets" aria-hidden="true">
-        <span>🐶</span>
-        <span>🐱</span>
-      </div>
-      <p class="cta-section__eyebrow">まずは無料相談から</p>
-      <h2 class="cta-section__title">あなたとペットの<br /><span>より良い毎日</span>をはじめましょう</h2>
-      <p class="cta-section__desc">今なら初月全額返金保証付き。リスクゼロで始められます。</p>
-      <div class="cta-section__actions">
-        <a href="#" class="btn btn--white btn--lg cta-section__btn">
-          無料相談する（30秒で完了）
-        </a>
-      </div>
-      <p class="cta-section__note">クレジットカード不要 ・ いつでも解約可能 ・ 初月全額返金保証</p>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <a href="#" class="footer__logo">
-          <span>🐾</span> PetCare Plus
-        </a>
-        <p class="footer__tagline">大切なペットの、一番の味方に。</p>
-      </div>
-      <nav class="footer__nav">
-        <ul>
-          <li><a href="#problems">お悩み</a></li>
-          <li><a href="#service">サービス</a></li>
-          <li><a href="#features">特徴</a></li>
-          <li><a href="#flow">ご利用の流れ</a></li>
-          <li><a href="#voice">お客様の声</a></li>
-          <li><a href="#faq">FAQ</a></li>
+      <div class="reveal">
+        <span class="badge">私たちにできること</span>
+        <h2 class="section-title" style="text-align:left;">あなたと愛犬・愛猫の<br>毎日を支えます</h2>
+        <p style="font-size:15px;color:var(--brown-mid);margin-bottom:8px;">PawCareは、ペットの日常ケアから緊急時サポートまで、トータルでお手伝いするサービスです。</p>
+        <ul class="service-list">
+          <li>ペットシッター・お預かりサービス（宿泊対応可）</li>
+          <li>プロによる定期トリミング・グルーミング</li>
+          <li>獣医師監修の健康相談・栄養アドバイス</li>
+          <li>お散歩代行・運動サポート</li>
+          <li>しつけ・トレーニングプログラム</li>
+          <li>24時間緊急サポートチャット対応</li>
         </ul>
-      </nav>
+        <a href="#cta" class="btn-primary" style="margin-top:32px;display:inline-flex;">
+          🐾 サービスの詳細を見る
+        </a>
+      </div>
     </div>
-    <div class="footer__bottom">
-      <div class="container">
-        <p class="footer__copy">&copy; 2024 PetCare Plus. All rights reserved.</p>
-        <div class="footer__links">
-          <a href="#">プライバシーポリシー</a>
-          <a href="#">利用規約</a>
-          <a href="#">特定商取引法に基づく表記</a>
+  </div>
+</section>
+
+<!-- ─── FEATURES ─── -->
+<section class="section features" id="features">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="badge">Features</span>
+      <h2 class="section-title">選ばれる4つの理由</h2>
+      <p class="section-sub">PawCareが多くのオーナーから支持される理由をご紹介します。</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <img class="feature-img" src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=600&q=80&auto=format&fit=crop" alt="認定プロスタッフ">
+        <div class="feature-body">
+          <h3>認定プロスタッフ</h3>
+          <p>全スタッフが動物取扱業の資格を保有。愛情と専門知識で大切なペットをケアします。</p>
+        </div>
+      </div>
+      <div class="feature-card reveal">
+        <img class="feature-img" src="https://images.unsplash.com/photo-1560743641-3914f2c45636?w=600&q=80&auto=format&fit=crop" alt="リアルタイム報告">
+        <div class="feature-body">
+          <h3>リアルタイム報告</h3>
+          <p>写真・動画つきの定期報告でペットの様子をいつでも確認。外出中も安心できます。</p>
+        </div>
+      </div>
+      <div class="feature-card reveal">
+        <img class="feature-img" src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=600&q=80&auto=format&fit=crop" alt="わかりやすい料金">
+        <div class="feature-body">
+          <h3>わかりやすい料金</h3>
+          <p>月額制の明瞭なプランで追加費用なし。安心して長期的にご利用いただけます。</p>
+        </div>
+      </div>
+      <div class="feature-card reveal">
+        <img class="feature-img" src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&q=80&auto=format&fit=crop" alt="相性抜群のマッチング">
+        <div class="feature-body">
+          <h3>相性抜群のマッチング</h3>
+          <p>ペットの性格・犬種・猫種に合ったスタッフを丁寧にマッチング。初回は無料面談も。</p>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- ─── FLOW ─── -->
+<section class="section flow" id="flow">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="badge">How to Use</span>
+      <h2 class="section-title">ご利用の流れ</h2>
+      <p class="section-sub">お申し込みからサービス開始まで、たった4ステップ。最短3日でスタートできます。</p>
+    </div>
+    <div class="flow-steps">
+      <div class="flow-step reveal">
+        <img class="flow-step-img" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=160&q=80&auto=format&fit=crop" alt="申込">
+        <div class="flow-num">1</div>
+        <h3>無料相談・申込</h3>
+        <p>フォームまたはLINEから簡単に申し込み。ご要望をヒアリングします。</p>
+      </div>
+      <div class="flow-step reveal">
+        <img class="flow-step-img" src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=160&q=80&auto=format&fit=crop" alt="マッチング">
+        <div class="flow-num">2</div>
+        <h3>スタッフマッチング</h3>
+        <p>お子の性格に合ったスタッフをご提案。無料のご対面もお選びいただけます。</p>
+      </div>
+      <div class="flow-step reveal">
+        <img class="flow-step-img" src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=160&q=80&auto=format&fit=crop" alt="プラン確定">
+        <div class="flow-num">3</div>
+        <h3>プラン確定</h3>
+        <p>ご希望の頻度・内容をもとに最適なプランを組み立てます。</p>
+      </div>
+      <div class="flow-step reveal">
+        <img class="flow-step-img" src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=160&q=80&auto=format&fit=crop" alt="サービス開始">
+        <div class="flow-num">4</div>
+        <h3>サービス開始！</h3>
+        <p>いよいよスタート。アプリで進捗確認しながら、毎日安心して過ごせます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TESTIMONIALS ─── -->
+<section class="section testimonials" id="voice">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="badge">Voice</span>
+      <h2 class="section-title">お客様の声</h2>
+      <p class="section-sub">PawCareをご利用いただいているオーナーさんからの嬉しいお声をご紹介します。</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">出張が多い仕事なのですが、PawCareを使い始めてから本当に安心できるようになりました。毎回写真付きで報告してくれるので、移動中でも愛犬の顔を見て癒されています。</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=96&q=80&auto=format&fit=crop&face" alt="田中 愛子さん"></div>
+          <div>
+            <div class="testi-name">田中 愛子さん（35歳）</div>
+            <div class="testi-pet">ゴールデンレトリバー / チョコ（3歳）</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">猫は繊細で預けるのが心配でしたが、担当スタッフさんがとても慣れていて、うちの子もすぐに懐いていました。料金も他社と比べてリーズナブルで助かっています。</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=96&q=80&auto=format&fit=crop&face" alt="鈴木 麻衣さん"></div>
+          <div>
+            <div class="testi-name">鈴木 麻衣さん（28歳）</div>
+            <div class="testi-pet">スコティッシュフォールド / ムギ（2歳）</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">散歩代行を頼んでいますが、帰ってきた時の愛犬の満足そうな顔がたまらないです。スタッフさんがその日の様子を細かく教えてくれるので、毎回楽しみにしています！</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&q=80&auto=format&fit=crop&face" alt="山本 健太さん"></div>
+          <div>
+            <div class="testi-name">山本 健太さん（42歳）</div>
+            <div class="testi-pet">トイプードル / モカ（5歳）</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="badge">FAQ</span>
+      <h2 class="section-title">よくある質問</h2>
+      <p class="section-sub">ご不明な点がございましたら、お気軽にお問い合わせください。</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          初めてでも大丈夫ですか？
+          <span class="q-icon">+</span>
+        </div>
+        <div class="faq-a">もちろんです！初めての方でも安心してご利用いただけるよう、無料のオリエンテーションを実施しています。ペットの性格や生活習慣などを丁寧にヒアリングした上でサービスをご案内します。</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          対応している犬種・猫種はありますか？
+          <span class="q-icon">+</span>
+        </div>
+        <div class="faq-a">犬・猫を中心にほぼすべての犬種・猫種に対応しています。大型犬や特殊な猫種の場合も、事前にご相談いただければ最適なスタッフを手配いたします。</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          料金プランはどのようになっていますか？
+          <span class="q-icon">+</span>
+        </div>
+        <div class="faq-a">月額制のプランと都度利用プランをご用意しています。月額プランは月3,980円〜で、頻度や内容に応じてカスタマイズが可能です。詳細はご相談時にご案内します。</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          急なキャンセルはできますか？
+          <span class="q-icon">+</span>
+        </div>
+        <div class="faq-a">24時間前までのキャンセルは無料で承っています。緊急の場合はなるべくお早めにご連絡ください。繰り返しのキャンセルはご利用制限が発生する場合があります。</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          ペットが体調を崩した場合はどうなりますか？
+          <span class="q-icon">+</span>
+        </div>
+        <div class="faq-a">緊急時はすぐにオーナー様へご連絡し、提携の動物病院へ速やかに対応します。サービス中のペットの安全を最優先に対応しますので、ご安心ください。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ─── -->
+<section class="cta" id="cta">
+  <div class="paw-deco paw-1">🐾</div>
+  <div class="paw-deco paw-2">🐾</div>
+  <div class="cta-inner">
+    <h2 class="cta-title">今すぐ、<br>大切な家族を<br>安心して預けよう。</h2>
+    <p class="cta-desc">
+      初回相談は無料・キャンセルOK。<br>
+      まずは気軽にお問い合わせください。
+    </p>
+    <a href="#" class="btn-white">
+      🐾 無料で相談する
+    </a>
+    <p class="cta-note">📞 平日9:00〜18:00 ｜ ✉ 24時間メール受付</p>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Paw<span>Care</span></div>
+    <nav class="footer-links">
+      <a href="#">サービス案内</a>
+      <a href="#">料金プラン</a>
+      <a href="#">スタッフ紹介</a>
+      <a href="#">よくある質問</a>
+      <a href="#">お問い合わせ</a>
+      <a href="#">プライバシーポリシー</a>
+      <a href="#">特定商取引法</a>
+    </nav>
+    <p class="footer-copy">© 2025 PawCare. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
